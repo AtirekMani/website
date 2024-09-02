@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Vaidyaraj Ayurveda</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #b71c1c;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        #hero {
+            background-color: #e9ecef;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #fff; /* Changed text color to white */
+        }
+
+        .hero-content img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .products-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .product-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-thumbnail {
+            width: 150px;
+            height: 150px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-details {
+            display: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .product-details img {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .show-more {
+            cursor: pointer;
+            color: #b71c1c;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+            color: #333;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-column h2 {
+            color: #b71c1c;
+            margin-top: 0;
+        }
+
+        .footer-column p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Shri Vaidyaraj Ayurveda</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#brands">Our Brands</a></li>
+                    <li><a href="index.html#join">Join Us</a></li>
+                    <li><a href="index.html#support">Support</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>At Shri Vaidyaraj Ayurveda, we believe in quality Ayurvedic products.</h2>
+            <img src="path/to/your/image.jpg" alt="Quality Ayurvedic Products"> <!-- Add your image here -->
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="product-thumbnails">
+            <!-- Example product thumbnails -->
+            <div class="product-thumbnail"><img src="path/to/product1-thumbnail.jpg" alt="Product 1"></div>
+            <div class="product-thumbnail"><img src="path/to/product2-thumbnail.jpg" alt="Product 2"></div>
+            <div class="product-thumbnail"><img src="path/to/product3-thumbnail.jpg" alt="Product 3"></div>
+            <div class="product-thumbnail"><img src="path/to/product4-thumbnail.jpg" alt="Product 4"></div>
+            <!-- Add more product thumbnails here -->
+        </div>
+        <div class="show-more" onclick="toggleProducts()">Show More</div>
+        <div class="product-details" id="product-details">
+            <!-- Example product details -->
+            <div class="product-item">
+                <img src="path/to/product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>This is a brief description of Product 1. It provides information about the product and its benefits.</p>
+            </div>
+            <div class="product-item">
+                <img src="path/to/product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>This is a brief description of Product 2. It provides information about the product and its benefits.</p>
+            </div>
+            <!-- Add more product details here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>Welcome to Shri Vaidyaraj Ayurveda. Our commitment is to provide you with the best Ayurvedic products derived from ancient knowledge and modern research.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Our Brands</h2>
+                <p>We offer a range of Ayurvedic brands that cater to different health and wellness needs. Explore our brands and find the right products for you.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Join Us</h2>
+                <p>Interested in becoming part of our team? Check out the opportunities available and join us in our mission to promote Ayurveda.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Support</h2>
+                <p>Need assistance with our products or services? Get in touch with our support team for any queries or issues.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleProducts() {
+            const productDetails = document.getElementById('product-details');
+            const showMore = document.querySelector('.show-more');
+            
+            if (productDetails.style.display === 'none' || productDetails.style.display === '') {
+                productDetails.style.display = 'block';
+                showMore.textContent = 'Show Less';
+            } else {
+                productDetails.style.display = 'none';
+                showMore.textContent = 'Show More';
+            }
+        }
+    </script>
+</body>
+</html>
